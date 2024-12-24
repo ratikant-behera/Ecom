@@ -18,15 +18,19 @@ const commonFeatureRouter = require("./routes/common/feature-routes");
 //create a database connection -> u can also
 //create a separate file for this and then import/use that file here
 
-mongoose
-  .connect("db_url")
-  .then(() => console.log("MongoDB connected"))
-  .catch((error) => console.log(error));
+// mongoose
+//   .connect("db_url")
+//   .then(() => console.log("MongoDB connected"))
+//   .catch((error) => console.log(error));
 
-const app = express();
-const PORT = process.env.PORT || 5000;
+// const app = express();
+// const PORT = process.env.PORT || 5000;
 
 
+mongoose.connect('mongodb+srv://beheraratikanta436:behera%40436@cluster0.13xkl.mongodb.net/')
+.then(()=>console.log("Mongodb connected")).catch(error=>console.log(error));
+const app=express()
+const PORT=process.env.PORT || 5000;
 
 
 app.use(
